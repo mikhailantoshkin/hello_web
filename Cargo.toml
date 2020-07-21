@@ -1,9 +1,21 @@
 [package]
-name = "hello_web"
+name = "rest_api_web"
 version = "0.1.0"
 authors = ["mikhailantoshkin <mike.antoshkin@gmail.com>"]
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[[bin]]
+path = "src/main.rs"
+name = "app"
+#
+#[workspace]
+#members = [
+#  "crates/web_server",
+#  "crates/thread_pool",
+#]
+
 [dependencies]
+web_server =  { version = "0.1.0", path = "crates/web_server" }
+thread_pool = { version = "0.1.0", path = "crates/thread_pool" }
